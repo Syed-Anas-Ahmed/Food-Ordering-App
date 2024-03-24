@@ -8,21 +8,19 @@ import {
 } from "react-native";
 import { Product } from "../types";
 import {
+  black,
   borderRadius,
   fontSizes,
   gold1,
   gold2,
-  gold3,
-  gold4,
   spacing,
-  tintColorLight,
   white,
 } from "@/constants/Colors";
 import { Link } from "expo-router";
 
 export const ProductListItem = ({ products }: { products: any[] }) => {
   return (
-    <View style={{ paddingHorizontal: spacing.m, backgroundColor: gold2 }}>
+    <View style={{ paddingHorizontal: spacing.m }}>
       <FlatList
         numColumns={2}
         showsVerticalScrollIndicator={false}
@@ -41,26 +39,28 @@ export const ProductListItem = ({ products }: { products: any[] }) => {
             <Pressable style={styles.container}>
               <View
                 style={{
-                  paddingTop:0,
+                  marginTop: -30,
+                  paddingTop: 0,
                   alignItems: "center",
                   justifyContent: "center",
-                  backgroundColor: "white",
+                  backgroundColor: gold2,
                   borderTopLeftRadius: borderRadius.m,
                   borderTopRightRadius: borderRadius.m,
                   padding: spacing.m,
+                  flex: 1,  
                 }}
               >
                 <Image
                   source={{
                     uri: item.image || "https://via.placeholder.com/150",
                   }}
-                  style={{ width: 150, aspectRatio: 1,bottom: -20}}
+                  style={{ width: 150, aspectRatio: 1, bottom: -20 }}
                 />
               </View>
               <View
                 style={{
                   marginTop: -40,
-                  backgroundColor: gold1,
+                  backgroundColor: white,
                   padding: spacing.m,
                   justifyContent: "flex-end",
                   borderBottomLeftRadius: borderRadius.m,
@@ -82,18 +82,20 @@ export const ProductListItem = ({ products }: { products: any[] }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    //backgroundColor: gold1,
-    borderRadius: borderRadius.s,
+    backgroundColor: gold1,
+    borderRadius: borderRadius.m,
     //padding: spacing.m,
     maxWidth: "100%",
+    overflow: "hidden",
   },
   title: {
-    color: white,
+    color: 'black',
     fontSize: fontSizes.m,
     fontWeight: "700",
+    opacity: 0.5,
   },
   price: {
-    color: white,
+    color: gold1,
     fontSize: 16,
     fontWeight: "400",
   },

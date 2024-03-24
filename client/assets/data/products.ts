@@ -1,7 +1,7 @@
 const products = [
   {
     id: 1,
-    name: 'Ultimate Pepperoni',
+    name: 'Pepperoni',
     image:
       'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/peperoni.png',
     price: 12.99,
@@ -57,7 +57,7 @@ const products = [
   },
   {
     id: 9,
-    name: 'Chicken Bacon Ranch',
+    name: 'Chicken Bacon',
     image:
       'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/extravaganzza.png',
     price: 13.99,

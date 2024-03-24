@@ -7,6 +7,7 @@ export const navyBlue = '#000080'; // navy blue
 export const lilac = '#c8a2c8'; // lilac
 export const bottleGreen = '#006400'; // bottle green
 export const white = '#fff';
+export const black = '#000000';
 
 export const olive1 = '#758467';
 export const olive2 = '#819171';

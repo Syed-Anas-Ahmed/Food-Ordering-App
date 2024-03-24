@@ -1,7 +1,7 @@
 import React from "react";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { Tabs } from "expo-router";
-import { bottleGreen, white } from "@constants/Colors";
+import { gold1, gold2, gold3, white } from "@constants/Colors";
 import { useClientOnlyValue } from "@components/useClientOnlyValue";
 
 // You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
@@ -16,8 +16,15 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: bottleGreen,
-        tabBarStyle: { backgroundColor: white,borderTopRightRadius: 20,borderTopLeftRadius: 20,height: 60, gap:0},
+        tabBarActiveTintColor: gold2,
+        tabBarInactiveTintColor: gold1,
+        tabBarStyle: {
+          backgroundColor: white,
+          borderTopRightRadius: 20,
+          borderTopLeftRadius: 20,
+          height: 60,
+          gap: 0,
+        },
         // Disable the static render of the header on web
         // to prevent a hydration error in React Navigation v6.
         headerShown: useClientOnlyValue(false, true),
